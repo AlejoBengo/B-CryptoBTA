@@ -14,7 +14,7 @@ const transporters_1 = require("../transporters");
 const notifications_1 = require("../notifications");
 const sendPromotion = (EmailTo, Name) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        (0, transporters_1.academyTransportator)((0, notifications_1.AcademyPromotion)(EmailTo, Name));
+        (0, transporters_1.transportator)((0, notifications_1.AcademyPromotion)(EmailTo, Name));
     }
     catch (err) {
         console.log(err);

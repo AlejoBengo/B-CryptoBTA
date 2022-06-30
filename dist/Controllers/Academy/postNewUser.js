@@ -24,7 +24,7 @@ const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, funct
                 email,
             });
             if (newSubscriptorInstance) {
-                yield (0, academyExecutor_1.sendPromotion)(email, name);
+                (0, academyExecutor_1.sendPromotion)(email, name);
                 return res.json(newSubscriptorInstance);
             }
             else {

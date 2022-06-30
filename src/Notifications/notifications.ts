@@ -1,12 +1,12 @@
-/*NEW USER*/
-export const WelcomeMessage = (to: string, name: string) => {
-   return {
-      from: 'businesstargetanalytic@gmail.com',
-      to: `${to}`,
-      subject: '¡Welcome to BTA Protocol!',
-      text: `Hi ${name}! We are glad to have you here.`,
-   };
-};
+// /*NEW USER*/
+// export const WelcomeMessage = (to: string, name: string) => {
+//    return {
+//       from: 'businesstargetanalytic@gmail.com',
+//       to: `${to}`,
+//       subject: '¡Welcome to BTA Protocol!',
+//       text: `Hi ${name}! We are glad to have you here.`,
+//    };
+// };
 
 /*ACADEMY SUBSCRIPTION*/
 export const AcademyPromotion = (to: string, name: string) => {

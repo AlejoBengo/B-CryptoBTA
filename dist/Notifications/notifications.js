@@ -1,16 +1,15 @@
 "use strict";
+// /*NEW USER*/
+// export const WelcomeMessage = (to: string, name: string) => {
+//    return {
+//       from: 'businesstargetanalytic@gmail.com',
+//       to: `${to}`,
+//       subject: '¡Welcome to BTA Protocol!',
+//       text: `Hi ${name}! We are glad to have you here.`,
+//    };
+// };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AcademyPromotion = exports.WelcomeMessage = void 0;
-/*NEW USER*/
-const WelcomeMessage = (to, name) => {
-    return {
-        from: 'businesstargetanalytic@gmail.com',
-        to: `${to}`,
-        subject: '¡Welcome to BTA Protocol!',
-        text: `Hi ${name}! We are glad to have you here.`,
-    };
-};
-exports.WelcomeMessage = WelcomeMessage;
+exports.AcademyPromotion = void 0;
 /*ACADEMY SUBSCRIPTION*/
 const AcademyPromotion = (to, name) => {
     return {
