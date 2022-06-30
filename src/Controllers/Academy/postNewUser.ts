@@ -6,10 +6,10 @@ const PostNewSubscriptor = async (req: Request, res: Response) => {
    try {
       const { name, email } = req.body;
       if (name && email) {
-         // const alreadyExists = await SubscriptorModel.findOne({ email: email });
-         // if (alreadyExists) {
-         //    return res.status(400).json(false);
-         // }
+         const alreadyExists = await SubscriptorModel.findOne({ email: email });
+         if (alreadyExists) {
+            return res.status(400).json(false);
+         }
          const newSubscriptorInstance = await SubscriptorModel.create({
             name,
             email,

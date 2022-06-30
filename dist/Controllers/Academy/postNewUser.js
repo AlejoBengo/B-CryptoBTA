@@ -15,10 +15,10 @@ const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, funct
     try {
         const { name, email } = req.body;
         if (name && email) {
-            // const alreadyExists = await SubscriptorModel.findOne({ email: email });
-            // if (alreadyExists) {
-            //    return res.status(400).json(false);
-            // }
+            const alreadyExists = yield Academy_1.SubscriptorModel.findOne({ email: email });
+            if (alreadyExists) {
+                return res.status(400).json(false);
+            }
             const newSubscriptorInstance = yield Academy_1.SubscriptorModel.create({
                 name,
                 email,
