@@ -1,12 +1,13 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 export const AcademyBTAConfig = nodemailer.createTransport({
-   host: 'smtp.1and1.es',
+   host: process.env.MAIL_HOST,
    port: 25,
    secure: false,
    auth: {
-      user: 'info@academybta.com',
-      pass: 'trader2020$$',
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS,
    },
 });
 
