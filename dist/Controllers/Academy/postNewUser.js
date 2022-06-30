@@ -10,21 +10,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Academy_1 = require("../../DBSource/Models/Academy");
-const academyExecutor_1 = require("../../Notifications/Executors/academyExecutor");
+const prueba_1 = require("../../Notifications/prueba");
 const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email } = req.body;
         if (name && email) {
-            const alreadyExists = yield Academy_1.SubscriptorModel.findOne({ email: email });
-            if (alreadyExists) {
-                return res.status(400).json(false);
-            }
+            // const alreadyExists = await SubscriptorModel.findOne({ email: email });
+            // if (alreadyExists) {
+            //    return res.status(400).json(false);
+            // }
             const newSubscriptorInstance = yield Academy_1.SubscriptorModel.create({
                 name,
                 email,
             });
             if (newSubscriptorInstance) {
-                (0, academyExecutor_1.sendPromotion)(email, name);
+                yield (0, prueba_1.sendPromotion)(email, name);
                 return res.json(newSubscriptorInstance);
             }
             else {
