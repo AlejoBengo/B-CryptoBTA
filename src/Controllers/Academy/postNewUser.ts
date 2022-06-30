@@ -15,7 +15,7 @@ const PostNewSubscriptor = async (req: Request, res: Response) => {
             email,
          });
          if (newSubscriptorInstance) {
-            sendPromotion(email, name);
+            await sendPromotion(email, name);
             return res.json(newSubscriptorInstance);
          } else {
             return res.status(400).json(false);
