@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ContractModel } from '../../DBSource/Models/Contract';
 
-const AddContractToUser = async (req: Request, res: Response) => {
+const createContract = async (req: Request, res: Response) => {
    try {
       const {
          user_id,
@@ -29,7 +29,7 @@ const AddContractToUser = async (req: Request, res: Response) => {
          if (newUserInstance) {
             return res.json(newUserInstance);
          } else {
-            return res.status(403).json({status: "No se ha podido creadr"})
+            return res.status(403).json({ status: 'No se ha podido creadr' });
          }
       }
    } catch (err: any) {
@@ -38,4 +38,4 @@ const AddContractToUser = async (req: Request, res: Response) => {
    }
 };
 
-module.exports = AddContractToUser;
+module.exports = createContract;

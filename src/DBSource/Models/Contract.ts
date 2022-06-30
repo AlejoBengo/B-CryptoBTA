@@ -13,7 +13,7 @@ class Contract {
    @prop({ required: true, trim: true })
    user_id: string;
 
-   @prop({ required: true, trim: true })
+   @prop({ required: true })
    inversion: number;
 
    @prop({ enum: Monedas, required: true })
@@ -25,13 +25,13 @@ class Contract {
    @prop({ required: true })
    contract: number;
 
-   @prop({ required: true, trim: true })
+   @prop({ required: true })
    inversion_total: number | null;
 
-   @prop({ required: true, trim: true })
+   @prop({ required: true })
    comienzo_de_inversion: Date;
 
-   @prop({ required: true, trim: true })
+   @prop({ required: true })
    fin_de_inversion: Date;
 
    @prop({ required: true })

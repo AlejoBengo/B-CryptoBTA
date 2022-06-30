@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
-const express = require('express');
-const fileUpload = require('express-fileupload');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const routes = require('./RoutingSource/index');
-const morgan = require('morgan');
+import fileUpload from 'express-fileupload';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import routes from './RoutingSource/index';
+import express from 'express';
+import morgan from 'morgan';
 const server = express();
 
 require('./DBSource/db');
@@ -35,6 +35,8 @@ server.use(
       tempFileDir: './uploads',
    })
 );
+
+server.use('/', routes);
 
 server.use('/', routes);
 

@@ -19,7 +19,7 @@ __decorate([
     __metadata("design:type", String)
 ], Contract.prototype, "user_id", void 0);
 __decorate([
-    prop({ required: true, trim: true }),
+    prop({ required: true }),
     __metadata("design:type", Number)
 ], Contract.prototype, "inversion", void 0);
 __decorate([
@@ -35,15 +35,15 @@ __decorate([
     __metadata("design:type", Number)
 ], Contract.prototype, "contract", void 0);
 __decorate([
-    prop({ required: true, trim: true }),
+    prop({ required: true }),
     __metadata("design:type", Object)
 ], Contract.prototype, "inversion_total", void 0);
 __decorate([
-    prop({ required: true, trim: true }),
+    prop({ required: true }),
     __metadata("design:type", Date)
 ], Contract.prototype, "comienzo_de_inversion", void 0);
 __decorate([
-    prop({ required: true, trim: true }),
+    prop({ required: true }),
     __metadata("design:type", Date)
 ], Contract.prototype, "fin_de_inversion", void 0);
 __decorate([

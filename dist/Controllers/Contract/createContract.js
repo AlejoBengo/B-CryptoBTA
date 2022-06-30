@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Contract_1 = require("../../DBSource/Models/Contract");
-const AddContractToUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const createContract = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { user_id, inversion, moneda_de_inversion, moneda_de_retiro, contract, inversion_total, comienzo_de_inversion, beneficio, ganacia_estimada, } = req.body;
         if (user_id) {
@@ -29,7 +29,7 @@ const AddContractToUser = (req, res) => __awaiter(void 0, void 0, void 0, functi
                 return res.json(newUserInstance);
             }
             else {
-                return res.status(403).json({ status: "No se ha podido creadr" });
+                return res.status(403).json({ status: 'No se ha podido creadr' });
             }
         }
     }
@@ -38,4 +38,4 @@ const AddContractToUser = (req, res) => __awaiter(void 0, void 0, void 0, functi
         return res.status(500).json(err);
     }
 });
-module.exports = AddContractToUser;
+module.exports = createContract;
