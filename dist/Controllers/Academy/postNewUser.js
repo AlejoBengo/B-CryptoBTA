@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Academy_1 = require("../../DBSource/Models/Academy");
-const prueba_1 = __importDefault(require("../../noti/executors/prueba"));
+const AcademyExe_1 = __importDefault(require("../../noti/executors/AcademyExe"));
 const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email } = req.body;
@@ -27,7 +27,7 @@ const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, funct
                 email,
             });
             if (newSubscriptorInstance) {
-                (0, prueba_1.default)(email, name);
+                (0, AcademyExe_1.default)(email, name);
                 return res.json(newSubscriptorInstance);
             }
             else {

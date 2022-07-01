@@ -1,6 +1,6 @@
 export const AcademyPromotion = (to: any, name: any) => {
    return {
-      from: 'info@academybta.com',
+      from: 'cursos@academybta.com',
       to: `${to}`,
       subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
       html: `
