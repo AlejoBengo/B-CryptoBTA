@@ -8,9 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const Academy_1 = require("../../DBSource/Models/Academy");
-const academyExecutor_1 = require("../../Notifications/Executors/academyExecutor");
+const academyExecutor_1 = __importDefault(require("../../Notifications/Executors/academyExecutor"));
 const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email } = req.body;
@@ -24,7 +27,7 @@ const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, funct
                 email,
             });
             if (newSubscriptorInstance) {
-                (0, academyExecutor_1.sendPromotion)(email, name);
+                (0, academyExecutor_1.default)(email, name);
                 return res.json(newSubscriptorInstance);
             }
             else {
