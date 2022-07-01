@@ -13,13 +13,18 @@ exports.sendPromotion = exports.AcademyBTAConfig = void 0;
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 exports.AcademyBTAConfig = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: 25,
-    secure: false,
+    service: 'gmail',
     auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: 'alejobengo@gmail.com',
+        pass: 'llimpdwtrdjhaypi',
     },
+    //    host: process.env.MAIL_HOST,
+    //    port: 25,
+    //    secure: false,
+    //    auth: {
+    //       user: process.env.MAIL_USER,
+    //       pass: process.env.MAIL_PASS,
+    //    },
 });
 const transportator = (MailOptions) => {
     exports.AcademyBTAConfig.sendMail(MailOptions, (err, info) => {

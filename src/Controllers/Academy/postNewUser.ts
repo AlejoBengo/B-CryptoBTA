@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { SubscriptorModel } from '../../DBSource/Models/Academy';
-import { sendPromotion } from '../../Notifications/prueba';
+import { sendPromotion } from '../../Notifications/Executors/academyExecutor';
 
 const PostNewSubscriptor = async (req: Request, res: Response) => {
    try {
@@ -15,7 +15,7 @@ const PostNewSubscriptor = async (req: Request, res: Response) => {
             email,
          });
          if (newSubscriptorInstance) {
-            await sendPromotion(email, name);
+            sendPromotion(email, name);
             return res.json(newSubscriptorInstance);
          } else {
             return res.status(400).json(false);

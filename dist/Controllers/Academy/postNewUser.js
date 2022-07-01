@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Academy_1 = require("../../DBSource/Models/Academy");
-const prueba_1 = require("../../Notifications/prueba");
+const academyExecutor_1 = require("../../Notifications/Executors/academyExecutor");
 const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email } = req.body;
@@ -24,7 +24,7 @@ const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, funct
                 email,
             });
             if (newSubscriptorInstance) {
-                yield (0, prueba_1.sendPromotion)(email, name);
+                (0, academyExecutor_1.sendPromotion)(email, name);
                 return res.json(newSubscriptorInstance);
             }
             else {

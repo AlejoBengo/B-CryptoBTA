@@ -1,18 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.transportator = void 0;
-const configurations_1 = require("./configurations");
-// export const transportator = (MailOptions: any) => {
-//    BTAProtocolConfig.sendMail(MailOptions, (err: any, info: any) => {
-//       if (err) {
-//          console.log(err);
-//       } else {
-//          console.log('Email sent to: ', info.accepted);
-//       }
-//    });
-// };
-const transportator = (MailOptions) => {
-    configurations_1.AcademyBTAConfig.sendMail(MailOptions, (err, info) => {
+exports.academyTransporter = void 0;
+const configuration_1 = require("./configuration");
+const academyTransporter = (MailOptions) => {
+    configuration_1.AcademyBTAConfig.sendMail(MailOptions, (err, info) => {
         if (err) {
             console.log(err);
         }
@@ -21,4 +12,4 @@ const transportator = (MailOptions) => {
         }
     });
 };
-exports.transportator = transportator;
+exports.academyTransporter = academyTransporter;
