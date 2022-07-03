@@ -1,7 +1,7 @@
-import { AcademyBTAConfig } from './configurations';
+import { HenryAskConfig } from './configurations';
 
 export const AcademyTransportator = (MailOptions: any) => {
-   AcademyBTAConfig.sendMail(MailOptions, (err: any, info: any) => {
+   HenryAskConfig.sendMail(MailOptions, (err: any, info: any) => {
       if (err) {
          console.log(err);
       } else {

@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AcademyPromotion = void 0;
-const AcademyPromotion = (to, name) => {
+exports.AnswerForPostData = void 0;
+const AnswerForPostData = (to, who) => {
     return {
-        from: 'info@academybta.com',
+        from: 'henryaskhenry@gmail.com',
         to: `${to}`,
-        subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
-        text: `¡Hola ${name}!, el material que has preparado se ha guardado en HenryAsk correctamente. Recurre a la página para editarlo o eliminarlo. Puedes ingrsar a la plataforma en el siguiente link: https://henryask.vercel.app/ 🚀.`,
+        subject: '¡Tu pregunta ha sido respondida :D!',
+        text: `¡Hola!, ${who} a respondido a tu pregunta. Puedes ingrsar a la plataforma en el siguiente link: https://henryask.vercel.app/ 🚀.`,
     };
 };
-exports.AcademyPromotion = AcademyPromotion;
+exports.AnswerForPostData = AnswerForPostData;

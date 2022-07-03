@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.academyTransporter = void 0;
-const configuration_1 = require("./configuration");
-const academyTransporter = (MailOptions) => {
-    configuration_1.AcademyBTAConfig.sendMail(MailOptions, (err, info) => {
+exports.transportator = void 0;
+const configurations_1 = require("./configurations");
+const transportator = (MailOptions) => {
+    configurations_1.HenryAskConfig.sendMail(MailOptions, (err, info) => {
         if (err) {
             console.log(err);
         }
@@ -12,4 +12,4 @@ const academyTransporter = (MailOptions) => {
         }
     });
 };
-exports.academyTransporter = academyTransporter;
+exports.transportator = transportator;
