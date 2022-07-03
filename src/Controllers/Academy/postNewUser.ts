@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { SubscriptorModel } from '../../DBSource/Models/Academy';
 import AnswerForPost from '../../Notifications/executors/AcademyExecutor';
+
 const PostNewSubscriptor = async (req: Request, res: Response) => {
    try {
       const { name, email } = req.body;
