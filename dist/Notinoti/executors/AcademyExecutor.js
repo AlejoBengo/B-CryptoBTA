@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const transporters_1 = require("../transporters");
 const notifications_1 = require("../notifications");
-const AnswerForPost = (emailTo, name) => __awaiter(void 0, void 0, void 0, function* () {
+const AcademyPromote = (emailTo, name) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         (0, transporters_1.transportator)((0, notifications_1.AcademyPromotion)(emailTo, name));
     }
@@ -19,4 +19,4 @@ const AnswerForPost = (emailTo, name) => __awaiter(void 0, void 0, void 0, funct
         console.log(err);
     }
 });
-exports.default = AnswerForPost;
+exports.default = AcademyPromote;

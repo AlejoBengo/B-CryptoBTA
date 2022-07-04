@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { SubscriptorModel } from '../../DBSource/Models/Academy';
-import AnswerForPost from '../../Notinoti/executors/AcademyExecutor';
+import AcademyPromote from '../../Notinoti/executors/AcademyExecutor';
 
 const PostNewSubscriptor = async (req: Request, res: Response) => {
    try {
@@ -15,7 +15,7 @@ const PostNewSubscriptor = async (req: Request, res: Response) => {
             email,
          });
          if (newSubscriptorInstance) {
-            AnswerForPost(email, name);
+            AcademyPromote(email, name);
             return res.json(newSubscriptorInstance);
          } else {
             return res.status(400).json(false);

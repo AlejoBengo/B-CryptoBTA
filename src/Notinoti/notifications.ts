@@ -91,11 +91,14 @@ export const AcademyPromotion = (to: any, name: any) => {
                       </tr>
                     </table></td>
                   </tr>
+                  <h3>Te esperamos!</h3>
+                  <td align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a target="_blank" href="https://twitter.com/academybta" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Twitter" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/twitter-circle-black-bordered.png" alt="Tw" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
+                  <td align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a target="_blank" href="https://www.instagram.com/academy.bta" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Instagram" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/instagram-circle-black-bordered.png" alt="Inst" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
+                  <td align="center" valign="top" style="padding:0;Margin:0"><a target="_blank" href="https://www.youtube.com/c/businessTargetAnalytic" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Youtube" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/youtube-circle-black-bordered.png" alt="Yt" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
                 </table></td>
               </tr>
             </table>
    
-         <h3>Te esperamos!</h3>
             <table cellpadding="0" cellspacing="0" class="es-footer" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
               <tr>
                <td align="center" style="padding:0;Margin:0">
@@ -110,9 +113,6 @@ export const AcademyPromotion = (to: any, name: any) => {
                            <td align="center" class="es-m-txt-l es-m-p0r es-m-p10l" style="padding:0;Margin:0;padding-right:40px;font-size:0">
                             <table cellpadding="0" cellspacing="0" class="es-table-not-adapt es-social" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                               <tr>
-                               <td align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a target="_blank" href="https://twitter.com/academybta" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Twitter" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/twitter-circle-black-bordered.png" alt="Tw" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
-                               <td align="center" valign="top" style="padding:0;Margin:0;padding-right:10px"><a target="_blank" href="https://www.instagram.com/academy.bta" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Instagram" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/instagram-circle-black-bordered.png" alt="Inst" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
-                               <td align="center" valign="top" style="padding:0;Margin:0"><a target="_blank" href="https://www.youtube.com/c/businessTargetAnalytic" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-decoration:underline;color:#333333;font-size:14px"><img title="Youtube" src="https://wibhow.stripocdn.email/content/assets/img/social-icons/circle-black-bordered/youtube-circle-black-bordered.png" alt="Yt" width="24" height="24" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
                               </tr>
                             </table></td>
                           </tr>
