@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const ContractClassic_1 = require("../../DBSource/Models/ContractClassic");
-const createContract = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const ContractIC_1 = require("../../DBSource/Models/ContractIC");
+const createIC = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { user_id, inversion, moneda_de_inversion, moneda_de_retiro, contract, inversion_total, comienzo_de_inversion, beneficio, ganacia_estimada, } = req.body;
+        const { user_id, inversion, moneda_de_inversion, moneda_de_retiro, contract, inversion_total, comienzo_de_inversion, fin_de_inversion, beneficio, } = req.body;
         if (user_id) {
-            const newUserInstance = yield ContractClassic_1.ContractClassicModel.create({
+            const newUserInstance = yield ContractIC_1.ContractICModel.create({
                 user_id,
                 inversion,
                 moneda_de_inversion,
@@ -22,8 +22,8 @@ const createContract = (req, res) => __awaiter(void 0, void 0, void 0, function*
                 contract,
                 inversion_total,
                 comienzo_de_inversion,
+                fin_de_inversion,
                 beneficio,
-                ganacia_estimada,
             });
             if (newUserInstance) {
                 return res.json(newUserInstance);
@@ -38,4 +38,4 @@ const createContract = (req, res) => __awaiter(void 0, void 0, void 0, function*
         return res.status(500).json(err);
     }
 });
-module.exports = createContract;
+module.exports = createIC;

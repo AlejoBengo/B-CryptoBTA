@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { ContractModel } from '../../DBSource/Models/Contract';
+import { ContractICModel } from '../../DBSource/Models/ContractIC';
 
-const createContract = async (req: Request, res: Response) => {
+const createIC = async (req: Request, res: Response) => {
    try {
       const {
          user_id,
@@ -11,11 +11,11 @@ const createContract = async (req: Request, res: Response) => {
          contract,
          inversion_total,
          comienzo_de_inversion,
+         fin_de_inversion,
          beneficio,
-         ganacia_estimada,
       } = req.body;
       if (user_id) {
-         const newUserInstance = await ContractModel.create({
+         const newUserInstance = await ContractICModel.create({
             user_id,
             inversion,
             moneda_de_inversion,
@@ -23,13 +23,13 @@ const createContract = async (req: Request, res: Response) => {
             contract,
             inversion_total,
             comienzo_de_inversion,
+            fin_de_inversion,
             beneficio,
-            ganacia_estimada,
          });
          if (newUserInstance) {
             return res.json(newUserInstance);
          } else {
-            return res.status(403).json({ status: 'No se ha podido creadr' });
+            return res.status(403).json({ status: 'No se ha podido crear.' });
          }
       }
    } catch (err: any) {
@@ -38,4 +38,4 @@ const createContract = async (req: Request, res: Response) => {
    }
 };
 
-module.exports = createContract;
+module.exports = createIC;

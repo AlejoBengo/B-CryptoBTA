@@ -2,9 +2,11 @@ const { Router } = require('express');
 const router = Router();
 
 /*IMPORT CONTROLLERS*/
-const CreateContract = require('../Controllers/Contract/createContract');
+const createIC = require('../Controllers/Contract/createIC');
+const createClassic = require('../Controllers/Contract/createClassic');
 
 /*ROUTES*/
-router.post('/', CreateContract);
+router.post('/ic', createIC);
+router.post('/classic', createClassic);
 
 export = router;
