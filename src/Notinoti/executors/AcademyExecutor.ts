@@ -1,9 +1,9 @@
-import { transportator } from '../transporters';
+import { academyTransportator } from '../transporters';
 import { AcademyPromotion } from '../notifications';
 
 const AcademyPromote = async (emailTo: string, name: string) => {
    try {
-      transportator(AcademyPromotion(emailTo, name));
+      academyTransportator(AcademyPromotion(emailTo, name));
    } catch (err) {
       console.log(err);
    }

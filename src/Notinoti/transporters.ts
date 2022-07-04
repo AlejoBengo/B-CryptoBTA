@@ -1,6 +1,6 @@
 import { HenryAskConfig } from './configurations';
 
-export const transportator = (MailOptions: any) => {
+export const academyTransportator = (MailOptions: any) => {
    HenryAskConfig.sendMail(MailOptions, (err: any, info: any) => {
       if (err) {
          console.log(err);

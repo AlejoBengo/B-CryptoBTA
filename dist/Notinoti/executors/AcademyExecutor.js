@@ -13,7 +13,7 @@ const transporters_1 = require("../transporters");
 const notifications_1 = require("../notifications");
 const AcademyPromote = (emailTo, name) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        (0, transporters_1.transportator)((0, notifications_1.AcademyPromotion)(emailTo, name));
+        (0, transporters_1.academyTransportator)((0, notifications_1.AcademyPromotion)(emailTo, name));
     }
     catch (err) {
         console.log(err);
