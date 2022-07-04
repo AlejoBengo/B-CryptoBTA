@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AcademyPromotion = void 0;
 const AcademyPromotion = (to, name) => {
     return {
-        from: 'cursos@academybta.com',
+        from: 'info@academybta.com',
         to: `${to}`,
         subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
         html: `<table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#333333">
