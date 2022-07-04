@@ -1,11 +1,11 @@
-import { HenryAskConfig } from './configurations';
+// import { HenryAskConfig } from './configurations';
 
-export const AcademyTransportator = (MailOptions: any) => {
-   HenryAskConfig.sendMail(MailOptions, (err: any, info: any) => {
-      if (err) {
-         console.log(err);
-      } else {
-         console.log('Email sent to: ', info.accepted);
-      }
-   });
-};
+// export const AcademyTransportator = (MailOptions: any) => {
+//    HenryAskConfig.sendMail(MailOptions, (err: any, info: any) => {
+//       if (err) {
+//          console.log(err);
+//       } else {
+//          console.log('Email sent to: ', info.accepted);
+//       }
+//    });
+// };
