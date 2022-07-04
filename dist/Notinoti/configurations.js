@@ -5,8 +5,9 @@ const nodemailer = require('nodemailer');
 exports.AcademyBTAConfig = nodemailer.createTransport({
     host: 'smtp.1and1.es',
     port: 25,
+    secure: false,
     auth: {
-        user: 'm100843746-144414495',
+        user: 'info@academybta.com',
         pass: 'trader2020$$',
     },
 });
