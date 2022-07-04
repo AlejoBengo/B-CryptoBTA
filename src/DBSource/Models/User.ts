@@ -21,7 +21,7 @@ class User {
    @prop({ required: true })
    password: string;
 
-   @prop({ required: true, trim: true }) // "user" || "administrator"
+   @prop({ required: true, trim: true }) // "user" || "administrator" 
    role: string;
 
    @prop({ required: true, trim: true })

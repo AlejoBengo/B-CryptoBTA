@@ -9,55 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContractModel = void 0;
+exports.DetailModel = void 0;
 const { prop, getModelForClass, modelOptions, } = require('@typegoose/typegoose');
-const { Monedas } = require('../ModelsConfig/ContractConfig');
-let Contract = class Contract {
+let Detail = class Detail {
 };
 __decorate([
     prop({ required: true, trim: true }),
     __metadata("design:type", String)
-], Contract.prototype, "user_id", void 0);
+], Detail.prototype, "name", void 0);
 __decorate([
     prop({ required: true }),
     __metadata("design:type", Number)
-], Contract.prototype, "inversion", void 0);
+], Detail.prototype, "value", void 0);
 __decorate([
-    prop({ enum: Monedas, required: true }),
+    prop({ required: true }),
     __metadata("design:type", String)
-], Contract.prototype, "moneda_de_inversion", void 0);
+], Detail.prototype, "type", void 0);
 __decorate([
-    prop({ enum: Monedas, required: true }),
+    prop({ required: true }),
     __metadata("design:type", String)
-], Contract.prototype, "moneda_de_retiro", void 0);
+], Detail.prototype, "symbol", void 0);
 __decorate([
     prop({ required: true }),
-    __metadata("design:type", Number)
-], Contract.prototype, "contract", void 0);
-__decorate([
-    prop({ required: true }),
-    __metadata("design:type", Object)
-], Contract.prototype, "inversion_total", void 0);
-__decorate([
-    prop({ required: true }),
-    __metadata("design:type", Date)
-], Contract.prototype, "comienzo_de_inversion", void 0);
-__decorate([
-    prop({ required: true }),
-    __metadata("design:type", Date)
-], Contract.prototype, "fin_de_inversion", void 0);
-__decorate([
-    prop({ required: true }),
-    __metadata("design:type", Number)
-], Contract.prototype, "beneficio", void 0);
-__decorate([
-    prop({ required: true }),
-    __metadata("design:type", Number)
-], Contract.prototype, "ganacia_estimada", void 0);
-Contract = __decorate([
+    __metadata("design:type", String)
+], Detail.prototype, "picture", void 0);
+Detail = __decorate([
     modelOptions({
         options: { allowMixed: 0 },
         schemaOptions: { timestamps: false },
     })
-], Contract);
-exports.ContractModel = getModelForClass(Contract);
+], Detail);
+exports.DetailModel = getModelForClass(Detail);

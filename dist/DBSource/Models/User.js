@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    prop({ required: true, trim: true }) // "user" || "administrator"
+    prop({ required: true, trim: true }) // "user" || "administrator" 
     ,
     __metadata("design:type", String)
 ], User.prototype, "role", void 0);
