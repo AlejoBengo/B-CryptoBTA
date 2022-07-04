@@ -9,7 +9,7 @@ const { Monedas } = require('../ModelsConfig/ContractConfig');
    options: { allowMixed: 0 },
    schemaOptions: { timestamps: false },
 })
-class Contract {
+class ContractClassic {
    @prop({ required: true, trim: true })
    user_id: string;
 
@@ -26,19 +26,13 @@ class Contract {
    contract: number;
 
    @prop({ required: true })
-   inversion_total: number | null;
+   comienzo_de_inversion: string;
 
    @prop({ required: true })
-   comienzo_de_inversion: Date;
-
-   @prop({ required: true })
-   fin_de_inversion: Date;
+   fin_de_inversion: string;
 
    @prop({ required: true })
    beneficio: number;
-
-   @prop({ required: true })
-   ganacia_estimada: number;
 }
 
-export const ContractModel = getModelForClass(Contract);
+export const ContractClassicModel = getModelForClass(ContractClassic);
