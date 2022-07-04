@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const InvestingDetail_1 = require("../../DBSource/Models/InvestingDetail");
 const getInvestingDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const savedInstance = yield InvestingDetail_1.DetailModel.findAll();
+        const savedInstance = yield InvestingDetail_1.DetailModel.find();
         if (savedInstance) {
             return res.json(savedInstance);
         }

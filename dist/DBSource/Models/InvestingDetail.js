@@ -28,6 +28,10 @@ __decorate([
 __decorate([
     prop({ required: true }),
     __metadata("design:type", String)
+], Detail.prototype, "symbol", void 0);
+__decorate([
+    prop({ required: true }),
+    __metadata("design:type", String)
 ], Detail.prototype, "picture", void 0);
 Detail = __decorate([
     modelOptions({

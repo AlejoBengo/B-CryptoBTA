@@ -7,14 +7,16 @@ const PostNewInvestingDetail = async (req: Request, res: Response) => {
         name,
         value,
         type,
-        picture
+        picture,
+        symbol
       } = req.body;
       if (name && value && type && picture) {
          const newInvestingInstance = await DetailModel.create({
             name,
             value,
             type,
-            picture
+            picture,
+            symbol
          });
          if (newInvestingInstance) {
             return res.json(newInvestingInstance);

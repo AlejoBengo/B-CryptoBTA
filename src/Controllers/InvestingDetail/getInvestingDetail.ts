@@ -4,7 +4,7 @@ import { DetailModel } from '../../DBSource/Models/InvestingDetail';
 const getInvestingDetail = async (req: Request, res: Response) => {
    try {
 
-         const savedInstance = await DetailModel.findAll();
+         const savedInstance = await DetailModel.find();
          if (savedInstance) {
             return res.json(savedInstance);
          }

@@ -7,15 +7,17 @@ const EditInvestingDetail = async (req: Request, res: Response) => {
         name,
         value,
         type,
-        picture
+        picture,
+        symbol
       } = req.body;
-      if (name && value && type && picture) {
+      if (name && value && type && picture&&symbol) {
          const newInvestingInstance = await DetailModel.updateOne(
             { name: name },
             {
                 value,
                 type,
-                picture
+                picture,
+                symbol
             }
          );
          const savedInstance = await DetailModel.findOne({ name: name });

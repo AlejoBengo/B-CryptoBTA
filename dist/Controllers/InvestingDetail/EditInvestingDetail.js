@@ -12,12 +12,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const InvestingDetail_1 = require("../../DBSource/Models/InvestingDetail");
 const EditInvestingDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name, value, type, picture } = req.body;
-        if (name && value && type && picture) {
+        const { name, value, type, picture, symbol } = req.body;
+        if (name && value && type && picture && symbol) {
             const newInvestingInstance = yield InvestingDetail_1.DetailModel.updateOne({ name: name }, {
                 value,
                 type,
-                picture
+                picture,
+                symbol
             });
             const savedInstance = yield InvestingDetail_1.DetailModel.findOne({ name: name });
             if (savedInstance) {

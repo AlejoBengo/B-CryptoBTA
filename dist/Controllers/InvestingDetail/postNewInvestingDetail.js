@@ -12,13 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const InvestingDetail_1 = require("../../DBSource/Models/InvestingDetail");
 const PostNewInvestingDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name, value, type, picture } = req.body;
+        const { name, value, type, picture, symbol } = req.body;
         if (name && value && type && picture) {
             const newInvestingInstance = yield InvestingDetail_1.DetailModel.create({
                 name,
                 value,
                 type,
-                picture
+                picture,
+                symbol
             });
             if (newInvestingInstance) {
                 return res.json(newInvestingInstance);
