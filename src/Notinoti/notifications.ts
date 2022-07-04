@@ -1,10 +1,9 @@
-export const AcademyPromotion = (to: any, who: any) => {
+export const AcademyPromotion = (to: any, name: any) => {
    return {
       from: 'cursos@academybta.com',
       to: `${to}`,
       subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
-      html: `
-               <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#333333">
+      html: `<table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#333333">
           <tr>
            <td valign="top" style="padding:0;Margin:0">
             <table cellpadding="0" cellspacing="0" class="es-header" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
@@ -52,7 +51,7 @@ export const AcademyPromotion = (to: any, who: any) => {
                        <td align="center" valign="top" style="padding:0;Margin:0;width:530px">
                         <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                           <tr class="es-visible-simple-html-only">
-                           <td align="left" style="padding:0;Margin:0;padding-left:15px;padding-right:20px"><h1 style="font-family: Helvetica, arial; font-size: 1.5rem">
+                           <td align="left" style="padding:0;Margin:0;padding-left:15px;padding-right:20px"><h1 style="font-family: Helvetica, arial; font-size: 1.1rem">
                              ¡TIENES UN DECUENTO ADICIONAL DE REGALO PARA CUALQUIER CURSO DE ACADEMY BTA!
                           </h1>
                           <h3 style="font-family: Helvetica; font-weight: 400">
@@ -159,7 +158,6 @@ export const AcademyPromotion = (to: any, who: any) => {
             </table></td>
           </tr>
          </table>
-         </div>
-                `,
+         </div>`,
    };
 };
