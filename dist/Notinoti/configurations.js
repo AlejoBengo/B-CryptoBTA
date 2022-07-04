@@ -6,7 +6,7 @@ exports.AcademyBTAConfig = nodemailer.createTransport({
     host: 'smtp.1and1.es',
     port: 25,
     auth: {
-        user: 'info@academybta.com',
+        user: 'm100843746-144414495',
         pass: 'trader2020$$',
     },
 });
