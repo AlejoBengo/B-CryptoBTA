@@ -1,9 +1,12 @@
-export const AcademyPromotion = (to: string, name: string) => {
-   return {
-      from: 'info@academybta.com',
-      to: `${to}`,
-      subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
-      html: `<table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#333333">
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcademyPromotion = void 0;
+const AcademyPromotion = (to, name) => {
+    return {
+        from: 'info@academybta.com',
+        to: `${to}`,
+        subject: '¡Obten un 10% de descuento en cualquier curso de Academy BTA!',
+        html: `<table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#333333">
       <tr>
        <td valign="top" style="padding:0;Margin:0">
         <table cellpadding="0" cellspacing="0" class="es-header" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
@@ -87,7 +90,6 @@ export const AcademyPromotion = (to: string, name: string) => {
                       <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://i.ibb.co/YTKwPj8/screen3.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="155"></td>
                       </tr>
                     </table></td>
-                    <h3>Te esperamos!</h3>
                   </tr>
                   </tr>
                 </table></td>
@@ -105,6 +107,7 @@ export const AcademyPromotion = (to: string, name: string) => {
                    <td align="center" valign="top" style="padding:0;Margin:0;width:530px">
                     <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                       <tr>
+                          <h3>Te esperamos!</h3>
                        <td align="center" class="es-m-txt-l es-m-p0r es-m-p10l" style="padding:0;Margin:0;padding-right:40px;font-size:0">
                         <table cellpadding="0" cellspacing="0" class="es-table-not-adapt es-social" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                           <tr>
@@ -156,5 +159,6 @@ export const AcademyPromotion = (to: string, name: string) => {
         </table></td>
       </tr>
      </table>`,
-   };
+    };
 };
+exports.AcademyPromotion = AcademyPromotion;

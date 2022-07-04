@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Academy_1 = require("../../DBSource/Models/Academy");
-const AcademyExecutor_1 = __importDefault(require("../../Notinoti/executors/AcademyExecutor"));
+const AcademyExecutor_1 = __importDefault(require("../../Notifications/executors/AcademyExecutor"));
 const PostNewSubscriptor = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, email } = req.body;

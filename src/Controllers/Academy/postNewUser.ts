@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { SubscriptorModel } from '../../DBSource/Models/Academy';
-import AcademyPromote from '../../Notinoti/executors/AcademyExecutor';
+import AcademyPromote from '../../Notifications/executors/AcademyExecutor';
 
 const PostNewSubscriptor = async (req: Request, res: Response) => {
    try {
