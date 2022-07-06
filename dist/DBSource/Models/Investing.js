@@ -22,7 +22,8 @@ __decorate([
     __metadata("design:type", Number)
 ], InvestOption.prototype, "value", void 0);
 __decorate([
-    prop({ required: true }),
+    prop({ required: true }) // nasdaq || crypto || matprima || interescomp
+    ,
     __metadata("design:type", String)
 ], InvestOption.prototype, "type", void 0);
 __decorate([
