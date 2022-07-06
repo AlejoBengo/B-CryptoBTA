@@ -1,22 +1,16 @@
 import { Request, Response } from 'express';
-import { DetailModel } from '../../DBSource/Models/InvestingDetail';
+import { InvestOptionModel } from '../../DBSource/Models/Investing';
 
 const PostNewInvestingDetail = async (req: Request, res: Response) => {
    try {
-      const {
-        name,
-        value,
-        type,
-        picture,
-        symbol
-      } = req.body;
+      const { name, value, type, picture, symbol } = req.body;
       if (name && value && type && picture) {
-         const newInvestingInstance = await DetailModel.create({
+         const newInvestingInstance = await InvestOptionModel.create({
             name,
             value,
             type,
             picture,
-            symbol
+            symbol,
          });
          if (newInvestingInstance) {
             return res.json(newInvestingInstance);
@@ -35,19 +29,3 @@ const PostNewInvestingDetail = async (req: Request, res: Response) => {
 };
 
 module.exports = PostNewInvestingDetail;
-/**
- *  class Detail {
-    @prop({ required: true, trim: true })
-    name: string;
- 
-    @prop({ required: true })
-    value: number;
- 
-    @prop({ required: true })
-    type: string; // nasdaq || crypto || matprima || interescomp
-
-    @prop({ required: true })
-    picture: string;
- 
- }
- */
