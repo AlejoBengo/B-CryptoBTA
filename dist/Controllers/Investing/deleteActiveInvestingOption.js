@@ -10,24 +10,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Investing_1 = require("../../DBSource/Models/Investing");
-const editInvestingDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const deleteActiveInvestingOption = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { _id, name, value, type, picture, symbol } = req.body;
-        if (_id && name && value && type && picture && symbol) {
-            const newInvestingInstance = yield Investing_1.InvestOptionModel.updateOne({ _id: _id }, {
-                value,
-                type,
-                picture,
-                symbol,
-            });
-            const savedInstance = yield Investing_1.InvestOptionModel.findOne({ _id: _id });
-            if (savedInstance) {
-                return res.json(savedInstance);
+        const { _id } = req.params;
+        console.log(_id);
+        if (_id) {
+            const newInvestingInstance = yield Investing_1.InvestOptionModel.deleteOne({ _id: _id });
+            console.log(newInvestingInstance);
+            if (newInvestingInstance) {
+                return res.json(newInvestingInstance);
             }
             else {
                 return res
                     .status(409)
-                    .json({ status: 'No se pudo editar el detalle de inversion.' });
+                    .json({ status: 'No se pudo eliminar el detalle de inversion.' });
             }
         }
         else {
@@ -39,4 +35,4 @@ const editInvestingDetail = (req, res) => __awaiter(void 0, void 0, void 0, func
         return res.status(500).json(err);
     }
 });
-module.exports = editInvestingDetail;
+module.exports = deleteActiveInvestingOption;
