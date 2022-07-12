@@ -14,6 +14,7 @@ const PostNewUser = async (req: Request, res: Response) => {
          address,
          postal_code,
          phone_number,
+         contract_specify,
       } = req.body;
       if (name && lastname && email && password && role) {
          const newUserInstance = await UserModel.create({
@@ -27,6 +28,7 @@ const PostNewUser = async (req: Request, res: Response) => {
             address,
             postal_code,
             phone_number,
+            contract_specify,
          });
          if (newUserInstance) {
             return res.json(newUserInstance);

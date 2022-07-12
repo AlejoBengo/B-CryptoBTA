@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 import { UserModel } from '../../DBSource/Models/User';
+import { ContractICModel } from '../../DBSource/Models/ContractIC';
+import { ContractClassicModel } from '../../DBSource/Models/ContractClassic';
 
 const dataChecker = async (req: Request, res: Response) => {
    try {
@@ -7,16 +9,40 @@ const dataChecker = async (req: Request, res: Response) => {
       if (!email || !password) {
          return res.status(400).json({ status: 'Faltan datos.' });
       } else {
-         const letAccessToUser = await UserModel.findOne({ email: email });
-         if (!letAccessToUser) {
+         const user_data = await UserModel.findOne({ email: email });
+         if (!user_data) {
             return res.status(404).json({ status: 'Este email no existe.' });
          } else {
-            if (letAccessToUser.password !== password) {
+            if (user_data.password !== password) {
                return res
                   .status(403)
                   .json({ status: 'La contraseña es incorrecta.' });
             } else {
-               return res.json(letAccessToUser);
+               if (user_data.contract_specify === 'classic') {
+                  const contract_data = await ContractClassicModel.findOne({
+                     user_id: user_data._id,
+                  });
+                  if (contract_data) {
+                     const userInformation = { user_data, contract_data };
+                     return res.json(userInformation);
+                  } else {
+                     return res
+                        .status(404)
+                        .json('El usuario no tiene contrato aún.');
+                  }
+               } else {
+                  const contract_data = await ContractICModel.findOne({
+                     user_id: user_data._id,
+                  });
+                  if (contract_data) {
+                     const userInformation = { user_data, contract_data };
+                     return res.json(userInformation);
+                  } else {
+                     return res
+                        .status(404)
+                        .json('El usuario no tiene contrato aún.');
+                  }
+               }
             }
          }
       }

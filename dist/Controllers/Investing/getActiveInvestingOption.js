@@ -14,10 +14,14 @@ const getActiveInvestingOptions = (req, res) => __awaiter(void 0, void 0, void 0
     try {
         const allInvestingOptions = yield Investing_1.InvestOptionModel.find();
         if (allInvestingOptions) {
-            const allActiveInvestingOptions = allInvestingOptions.map((option) => {
-                if (option.value > 0)
-                    return option;
-            });
+            let allActiveInvestingOptions = [];
+            for (let i = 0; i < allInvestingOptions.length; i++) {
+                if (allInvestingOptions[i].value > 0) {
+                    console.log(i, allInvestingOptions[i]);
+                    allActiveInvestingOptions.push(allInvestingOptions[i]);
+                }
+            }
+            console.log(allActiveInvestingOptions);
             if (allActiveInvestingOptions) {
                 return res.json(allActiveInvestingOptions);
             }

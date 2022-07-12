@@ -10,6 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const User_1 = require("../../DBSource/Models/User");
+const ContractIC_1 = require("../../DBSource/Models/ContractIC");
+const ContractClassic_1 = require("../../DBSource/Models/ContractClassic");
 const dataChecker = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, password } = req.body;
@@ -17,18 +19,45 @@ const dataChecker = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
             return res.status(400).json({ status: 'Faltan datos.' });
         }
         else {
-            const letAccessToUser = yield User_1.UserModel.findOne({ email: email });
-            if (!letAccessToUser) {
+            const user_data = yield User_1.UserModel.findOne({ email: email });
+            if (!user_data) {
                 return res.status(404).json({ status: 'Este email no existe.' });
             }
             else {
-                if (letAccessToUser.password !== password) {
+                if (user_data.password !== password) {
                     return res
                         .status(403)
                         .json({ status: 'La contraseña es incorrecta.' });
                 }
                 else {
-                    return res.json(letAccessToUser);
+                    if (user_data.contract_specify === 'classic') {
+                        const contract_data = yield ContractClassic_1.ContractClassicModel.findOne({
+                            user_id: user_data._id,
+                        });
+                        if (contract_data) {
+                            const userInformation = { user_data, contract_data };
+                            return res.json(userInformation);
+                        }
+                        else {
+                            return res
+                                .status(404)
+                                .json('El usuario no tiene contrato aún.');
+                        }
+                    }
+                    else {
+                        const contract_data = yield ContractIC_1.ContractICModel.findOne({
+                            user_id: user_data._id,
+                        });
+                        if (contract_data) {
+                            const userInformation = { user_data, contract_data };
+                            return res.json(userInformation);
+                        }
+                        else {
+                            return res
+                                .status(404)
+                                .json('El usuario no tiene contrato aún.');
+                        }
+                    }
                 }
             }
         }

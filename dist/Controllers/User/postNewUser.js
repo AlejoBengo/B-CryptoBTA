@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const User_1 = require("../../DBSource/Models/User");
 const PostNewUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name, lastname, email, password, role, country, city, address, postal_code, phone_number, } = req.body;
+        const { name, lastname, email, password, role, country, city, address, postal_code, phone_number, contract_specify, } = req.body;
         if (name && lastname && email && password && role) {
             const newUserInstance = yield User_1.UserModel.create({
                 name,
@@ -25,6 +25,7 @@ const PostNewUser = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
                 address,
                 postal_code,
                 phone_number,
+                contract_specify,
             });
             if (newUserInstance) {
                 return res.json(newUserInstance);

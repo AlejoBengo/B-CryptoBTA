@@ -2,11 +2,13 @@ import { Request, Response } from 'express';
 import { InvestOptionModel } from '../../DBSource/Models/Investing';
 
 interface InvestingOption {
+   _id: string;
    name: string;
    value: number;
    type: string;
    symbol: string;
    picture: string;
+   __v: number;
 }
 
 const getActiveInvestingOptions = async (req: Request, res: Response) => {
@@ -14,11 +16,14 @@ const getActiveInvestingOptions = async (req: Request, res: Response) => {
       const allInvestingOptions = await InvestOptionModel.find();
 
       if (allInvestingOptions) {
-         const allActiveInvestingOptions = allInvestingOptions.map(
-            (option: InvestingOption) => {
-               if (option.value > 0) return option;
+         let allActiveInvestingOptions: Array<InvestingOption> = [];
+         for (let i = 0; i < allInvestingOptions.length; i++) {
+            if (allInvestingOptions[i].value > 0) {
+               console.log(i, allInvestingOptions[i]);
+               allActiveInvestingOptions.push(allInvestingOptions[i]);
             }
-         );
+         }
+         console.log(allActiveInvestingOptions);
          if (allActiveInvestingOptions) {
             return res.json(allActiveInvestingOptions);
          } else {

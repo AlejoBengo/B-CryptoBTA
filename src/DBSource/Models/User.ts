@@ -21,7 +21,7 @@ class User {
    @prop({ required: true })
    password: string;
 
-   @prop({ required: true, trim: true }) // "user" || "administrator" 
+   @prop({ required: true, trim: true }) // "user" || "administrator"
    role: string;
 
    @prop({ required: true, trim: true })
@@ -38,6 +38,9 @@ class User {
 
    @prop({ required: true })
    phone_number: number;
+
+   @prop({ required: true, trim: true }) // "classic" / "ic"
+   contract_specify: string;
 }
 
 export const UserModel = getModelForClass(User);

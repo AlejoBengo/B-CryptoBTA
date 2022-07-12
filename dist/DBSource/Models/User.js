@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    prop({ required: true, trim: true }) // "user" || "administrator" 
+    prop({ required: true, trim: true }) // "user" || "administrator"
     ,
     __metadata("design:type", String)
 ], User.prototype, "role", void 0);
@@ -54,6 +54,11 @@ __decorate([
     prop({ required: true }),
     __metadata("design:type", Number)
 ], User.prototype, "phone_number", void 0);
+__decorate([
+    prop({ required: true, trim: true }) // "classic" / "ic"
+    ,
+    __metadata("design:type", String)
+], User.prototype, "contract_specify", void 0);
 User = __decorate([
     modelOptions({
         options: { allowMixed: 0 },
