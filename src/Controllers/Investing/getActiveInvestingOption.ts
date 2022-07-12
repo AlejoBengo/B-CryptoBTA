@@ -19,11 +19,9 @@ const getActiveInvestingOptions = async (req: Request, res: Response) => {
          let allActiveInvestingOptions: Array<InvestingOption> = [];
          for (let i = 0; i < allInvestingOptions.length; i++) {
             if (allInvestingOptions[i].value > 0) {
-               console.log(i, allInvestingOptions[i]);
                allActiveInvestingOptions.push(allInvestingOptions[i]);
             }
          }
-         console.log(allActiveInvestingOptions);
          if (allActiveInvestingOptions) {
             return res.json(allActiveInvestingOptions);
          } else {
