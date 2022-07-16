@@ -3,10 +3,10 @@ import { InvestOptionModel } from '../../DBSource/Models/Investing';
 
 const editInvestingDetail = async (req: Request, res: Response) => {
    try {
-      const { name, value, type, picture, symbol } = req.body;
-      if (name && value && type && picture && symbol) {
+      const { _id,name, value, type, picture, symbol } = req.body;
+      if (_id && name && value && type && picture && symbol) {
          const newInvestingInstance = await InvestOptionModel.updateOne(
-            { name: name },
+            { _id: _id },
             {
                value,
                type,
@@ -14,7 +14,7 @@ const editInvestingDetail = async (req: Request, res: Response) => {
                symbol,
             }
          );
-         const savedInstance = await InvestOptionModel.findOne({ name: name });
+         const savedInstance = await InvestOptionModel.findOne({ _id: _id });
          if (savedInstance) {
             return res.json(savedInstance);
          } else {
